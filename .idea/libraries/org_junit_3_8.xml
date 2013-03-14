@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.junit_3.8">
+    <CLASSES>
+      <root url="file://C:/eclipse/plugins/org.junit_3.8.1" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://C:/eclipse/plugins/org.junit_3.8.1" recursive="false" />
+  </library>
+</component>
