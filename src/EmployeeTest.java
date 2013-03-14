@@ -15,9 +15,9 @@ public class EmployeeTest {
         EmployeeList.add(new Employee("Neil",35));
 
         for (Employee Emp: EmployeeList) {
-        System.out.println(Emp.getName()+"\t"+Emp.getAge());
-        Emp.incAge();
-        System.out.println(Emp.getName()+"\t"+Emp.getAge());
+            System.out.println(Emp.getName()+"\t"+Emp.getAge());
+            Emp.incAge();
+            System.out.println(Emp.getName()+"\t"+Emp.getAge());
         }
 
     }

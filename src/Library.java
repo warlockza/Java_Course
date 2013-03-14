@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Library
 {
-    private Collection theMembers;
+    private Collection<Member> theMembers;
 
     public Library()
     {
@@ -12,7 +12,7 @@ public class Library
         // create a new instance of an empty 'list' class
         // e.g. LinkedList or choose ArrayList if you prefer
         // hold the reference in the instance variable defined
-                  theMembers=new ArrayList();
+                  theMembers=new TreeSet<Member>();
     }
 
     public void addMember(String name, int age)
@@ -33,10 +33,8 @@ public class Library
         // Iterate through the members and add their details to 'sb'
         // (use the StringBuffer's append() method)
         //
-         Iterator memIter=theMembers.iterator();
-         while (memIter.hasNext()) {
-             Member aMember=(Member)memIter.next();
-             sb.append(aMember.getDetails()+"\n");
+        for (Member mem : theMembers) {
+            sb.append(mem.getDetails() + "\n");
          }
 
         return sb.toString();
@@ -45,14 +43,14 @@ public class Library
     public boolean removeMember(String name)
     {
         boolean result = false;
-                  Iterator memIter=theMembers.iterator();
-        while (memIter.hasNext()) {
-            Member aMember=(Member)memIter.next();
-            if (aMember.getName().equals(name)){
-                theMembers.remove(aMember);
+
+        for (Member mem: theMembers) {
+            if (mem.getName().equals(name)) {
+                theMembers.remove(mem);
                 return true;
             }
         }
+
         // to do:
         // create another Iterator in the same way
         // and use it to help you find the member requested.

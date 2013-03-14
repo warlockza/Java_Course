@@ -1,6 +1,6 @@
 
 
-public class Member
+public class Member implements Comparable<Member>
 {
     private String name;
     private int age, idNum;
@@ -25,5 +25,9 @@ public class Member
         details.append((name.length() > 7)? "\t": "\t\t");
         details.append("" + age);
         return details.toString();
+    }
+
+    public int compareTo(Member m) {
+                  return m.age-this.age;
     }
 }
